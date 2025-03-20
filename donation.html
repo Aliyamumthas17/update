@@ -1,0 +1,71 @@
+<header>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-tshirt"></i>
+            <span>ClothCare</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">
+                <button type="button" class="nav-button">About</button>
+            </a>
+            <a href="donation.html">
+                <button type="button" class="nav-button">Donate</button>
+            </a>
+            <a href="receiver.html">
+                <button type="button" class="nav-button">Receive</button>
+            </a>
+            <a href="contact.html">
+                <button type="button" class="nav-button">Contact</button>
+            </a>
+            <a href="log.html">
+                <button type="button" class="nav-button">Login</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<section id="donate" class="donate">
+    <link rel="stylesheet" href="donation.css">
+    <h2>Make a Donation</h2>
+    <form id="donationForm" class="donation-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label>Type of Clothes</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="shirts"> Shirts</label>
+                <label><input type="checkbox" value="pants"> Pants</label>
+                <label><input type="checkbox" value="jackets"> Jackets</label>
+                <label><input type="checkbox" value="shoes"> Shoes</label>
+                <label><input type="checkbox" value="dresses"> Dresses</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="condition">Condition</label>
+            <select id="condition" required>
+                <option value="">Select condition</option>
+                <option value="new">New</option>
+                <option value="likeNew">Like New</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="photoUpload">Upload Photo(s)</label>
+            <input type="file" id="photoUpload" name="photoUpload" accept="image/*" multiple class="file-input">
+            <div id="imagePreview" class="image-preview"></div>
+        </div>
+        <div class="form-group">
+            <label for="comments">Special Instructions</label>
+            <textarea id="comments"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Donation</button>
+    </form>
+</section>
